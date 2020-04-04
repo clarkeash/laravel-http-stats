@@ -1,20 +1,15 @@
 # Laravel Http Stats
 
 <p align="center">
-  <a href="https://travis-ci.org/clarkeash/laravel-http-stats">
-    <img src="https://img.shields.io/travis/clarkeash/laravel-http-stats.svg?style=flat-square">
-  </a>
-  <a href="https://scrutinizer-ci.com/g/clarkeash/laravel-http-stats/code-structure/master/code-coverage">
-      <img src="https://img.shields.io/scrutinizer/coverage/g/clarkeash/laravel-http-stats.svg?style=flat-square">
-    </a>
-  <a href="https://scrutinizer-ci.com/g/clarkeash/laravel-http-stats">
-    <img src="https://img.shields.io/scrutinizer/g/clarkeash/laravel-http-stats.svg?style=flat-square">
+  
+  <a href="https://github.com/clarkeash/laravel-http-stats/actions?query=workflow%3ACI">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/clarkeash/laravel-http-stats/CI?logo=github&style=for-the-badge">
   </a>
   <a href="https://github.com/clarkeash/laravel-http-stats/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/clarkeash/laravel-http-stats.svg?style=flat-square">
+    <img src="https://img.shields.io/github/license/clarkeash/laravel-http-stats.svg?style=for-the-badge">
   </a>
   <a href="https://twitter.com/clarkeash">
-    <img src="http://img.shields.io/badge/author-@clarkeash-blue.svg?style=flat-square">
+    <img src="http://img.shields.io/badge/author-@clarkeash-blue.svg?style=for-the-badge">
   </a>
 </p>
 
