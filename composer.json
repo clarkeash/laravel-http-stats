@@ -1,0 +1,41 @@
+{
+    "name": "clarkeash/laravel-http-stats",
+    "description": "Get access to stats for your http requests",
+    "type": "library",
+    "require": {
+        "php": "^7.3",
+        "laravel/framework": "^7.0",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": "^5.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashley Clarke",
+            "email": "me@ashleyclarke.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Clarkeash\\LaravelHttpStats\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Clarkeash\\LaravelHttpStats\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Clarkeash\\LaravelHttpStats\\Providers\\ServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
