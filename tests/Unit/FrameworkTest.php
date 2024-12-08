@@ -5,13 +5,12 @@ namespace Test\Clarkeash\LaravelHttpStats\Unit;
 use PHPUnit\Framework\Assert;
 use Illuminate\Support\Facades\Http;
 use Clarkeash\LaravelHttpStats\Stats;
+use PHPUnit\Framework\Attributes\Test;
 use Test\Clarkeash\LaravelHttpStats\TestCase;
 
 class FrameworkTest extends TestCase
 {
-    /**
-    * @test
-    */
+    #[Test]
     public function it_adds_stats()
     {
         /*

@@ -17,13 +17,24 @@ class Stats
     }
 
     /**
-     * DNS lookup time in ms.
-     *
+     * @param float $value
+     * @param bool $milli
      * @return int
      */
-    public function lookup(): int
+    protected function microOrMilli(float $value, bool $milli): int
     {
-        return round($this->transferStats->getHandlerStat('namelookup_time_us') / 1000);
+        return $milli ? round($value / 1000) : round($value);
+    }
+
+    /**
+     * DNS lookup time in ms.
+     *
+     * @param bool $milli
+     * @return int
+     */
+    public function lookup(bool $milli = true): int
+    {
+        return $this->microOrMilli($this->transferStats->getHandlerStat('namelookup_time_us'), $milli);
     }
 
     /**
@@ -31,58 +42,63 @@ class Stats
      *
      * @return int
      */
-    public function connect(): int
+    public function connect(bool $milli = true): int
     {
-        return round($this->transferStats->getHandlerStat('connect_time_us') / 1000);
+        return $this->microOrMilli($this->transferStats->getHandlerStat('connect_time_us'), $milli);
     }
 
     /**
      * SSL handshake time in ms.
      *
+     * @param bool $milli
      * @return int
      */
-    public function ssl(): int
+    public function ssl(bool $milli = true): int
     {
-        return round($this->transferStats->getHandlerStat('appconnect_time_us') / 1000);
+        return $this->microOrMilli($this->transferStats->getHandlerStat('appconnect_time_us'), $milli);
     }
 
     /**
      * Negotiation time in ms.
      *
+     * @param bool $milli
      * @return int
      */
-    public function pretransfer(): int
+    public function pretransfer(bool $milli = true): int
     {
-        return round($this->transferStats->getHandlerStat('pretransfer_time_us') / 1000);
+        return $this->microOrMilli($this->transferStats->getHandlerStat('pretransfer_time_us'), $milli);
     }
 
     /**
      * Redirect time in ms.
      *
+     * @param bool $milli
      * @return int
      */
-    public function redirect(): int
+    public function redirect(bool $milli = true): int
     {
-        return round($this->transferStats->getHandlerStat('redirect_time_us') / 1000);
+        return $this->microOrMilli($this->transferStats->getHandlerStat('redirect_time_us'), $milli);
     }
 
     /**
      * Time to first byte in ms.
      *
+     * @param bool $milli
      * @return int
      */
-    public function ttfb(): int
+    public function ttfb(bool $milli = true): int
     {
-        return round($this->transferStats->getHandlerStat('starttransfer_time_us') / 1000);
+        return $this->microOrMilli($this->transferStats->getHandlerStat('starttransfer_time_us'), $milli);
     }
 
     /**
      * Total time in ms.
      *
+     * @param bool $milli
      * @return int
      */
-    public function total(): int
+    public function total(bool $milli = true): int
     {
-        return round($this->transferStats->getHandlerStat('total_time_us') / 1000);
+        return $this->microOrMilli($this->transferStats->getHandlerStat('total_time_us'), $milli);
     }
 }
