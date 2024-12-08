@@ -3,7 +3,7 @@
     "description": "Get access to stats for your http requests",
     "type": "library",
     "require": {
-        "php": "^8.0",
+        "php": "^8.2",
         "laravel/framework": "^11.0",
         "guzzlehttp/guzzle": "^7.8"
     },

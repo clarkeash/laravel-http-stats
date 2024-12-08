@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        php: [8.0, 8.4]
+        php: [8.2, 8.4]
         stability: [prefer-lowest, prefer-stable]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -39,7 +39,7 @@ jobs:
           coverage: none
       
       - name: Install dependencies
-        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-suggest
+        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction
       
       - name: Execute tests
         run: vendor/bin/phpunit --verbose
